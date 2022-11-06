@@ -208,7 +208,7 @@
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:gravity="center"
-                    android:text="加入收藏"
+                    android:text="收藏"
                     android:textAlignment="gravity"
                     android:textColor="@color/color_CCFFFFFF"
                     android:textSize="@dimen/ts_30" />
