@@ -115,7 +115,7 @@ public class ApiConfig {
     }
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://v.5ms.cc/box/v.json");
+        String apiUrl = Hawk.get(HawkConfig.API_URL, "http://v.5ms.cc/box/v.json");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
@@ -139,12 +139,12 @@ public class ApiConfig {
             }else if (apiUrl.startsWith("http")){
                 configUrl = a[0];
             }else {
-                configUrl = "https://" + a[0];
+                configUrl = "http://" + a[0];
             }
         } else if (apiUrl.startsWith("clan")) {
             configUrl = clanToAddress(apiUrl);
         } else if (!apiUrl.startsWith("http")) {
-            configUrl = "https://" + configUrl;
+            configUrl = "http://" + configUrl;
         } else {
             configUrl = apiUrl;
         }
