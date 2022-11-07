@@ -116,10 +116,10 @@ public class ApiConfig {
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
         String apiUrl = Hawk.get(HawkConfig.API_URL, "https://v.5ms.cc/box/v.json");
-        if (apiUrl.isEmpty()) {
-            callback.error("-1");
-            return;
-        }
+//         if (apiUrl.isEmpty()) {
+//             callback.error("-1");
+//             return;
+//         }
         File cache = new File(App.getInstance().getFilesDir().getAbsolutePath() + "/" + MD5.encode(apiUrl));
         if (useCache && cache.exists()) {
             try {
