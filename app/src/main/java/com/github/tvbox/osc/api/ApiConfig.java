@@ -139,12 +139,12 @@ public class ApiConfig {
             }else if (apiUrl.startsWith("http")){
                 configUrl = a[0];
             }else {
-                configUrl = "http://" + a[0];
+                configUrl = "https://" + a[0];
             }
         } else if (apiUrl.startsWith("clan")) {
             configUrl = clanToAddress(apiUrl);
         } else if (!apiUrl.startsWith("http")) {
-            configUrl = "http://" + configUrl;
+            configUrl = "https://" + configUrl;
         } else {
             configUrl = apiUrl;
         }
