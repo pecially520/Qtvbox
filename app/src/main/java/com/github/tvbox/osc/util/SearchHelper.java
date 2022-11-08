@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class SearchHelper {
 
     public static HashMap<String, String> getSourcesForSearch() {
-        String api = Hawk.get(HawkConfig.API_URL, "");
+        String api = Hawk.get(HawkConfig.API_URL, "https://v.5ms.cc/box/v.json");
         if (api.isEmpty()) {
             return null;
         }
