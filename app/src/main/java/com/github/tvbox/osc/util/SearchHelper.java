@@ -35,7 +35,7 @@ public class SearchHelper {
     }
 
     public static void putCheckedSources(HashMap<String, String> mCheckSources) {
-        String api = Hawk.get(HawkConfig.API_URL, "");
+        String api = Hawk.get(HawkConfig.API_URL, "https://v.5ms.cc/box/v.json");
         if (api.isEmpty()) {
             return;
         }
@@ -48,7 +48,7 @@ public class SearchHelper {
     }
 
     public static void putCheckedSource(String siteKey, boolean checked) {
-        String api = Hawk.get(HawkConfig.API_URL, "");
+        String api = Hawk.get(HawkConfig.API_URL, "https://v.5ms.cc/box/v.json");
         if (api.isEmpty()) {
             return;
         }
