@@ -207,6 +207,8 @@ public class DetailActivity extends BaseActivity {
 
         //禁用播放地址焦点
         tvPlayUrl.setFocusable(false);
+        
+        llPlayerFragmentContainerBlock.setOnClickListener((view -> toggleFullPreview()));
 
         tvSort.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NotifyDataSetChanged")
