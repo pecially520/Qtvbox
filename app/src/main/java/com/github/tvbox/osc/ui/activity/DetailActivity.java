@@ -653,6 +653,7 @@ public class DetailActivity extends BaseActivity {
                             llPlayerFragmentContainer.setVisibility(View.VISIBLE);
                             llPlayerFragmentContainerBlock.setVisibility(View.VISIBLE);
                             llPlayerFragmentContainerBlock.requestFocus();
+                            toggleSubtitleTextSize();
                         }
                         // startQuickSearch();
                     } else {
@@ -935,5 +936,16 @@ public class DetailActivity extends BaseActivity {
         tvSort.setFocusable(!fullWindows);
         tvCollect.setFocusable(!fullWindows);
         tvQuickSearch.setFocusable(!fullWindows);
+        toggleSubtitleTextSize();
+    }
+
+    void toggleSubtitleTextSize() {
+        int subtitleTextSize;
+        if (fullWindows) {
+            subtitleTextSize = SubtitleHelper.getTextSize(this);
+        } else {
+            subtitleTextSize = SubtitleHelper.getSubtitleTextAutoSize(this);
+        }
+        EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_SUBTITLE_SIZE_CHANGE, subtitleTextSize));
     }
 }
