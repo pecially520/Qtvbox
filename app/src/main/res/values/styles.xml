@@ -42,7 +42,7 @@
 
     <style name="epg_window_btn">
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/item_bg_selector_right</item>
+        <item name="android:background">@drawable/shape_live_select</item>
         <item name="android:paddingLeft">0dip</item>
         <item name="android:paddingRight">0dip</item>
         <item name="android:focusable">true</item>
