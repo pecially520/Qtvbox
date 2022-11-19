@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/vs_50"
         android:layout_marginBottom="@dimen/vs_10"
-        android:background="@drawable/shape_setting_sort_focus"
+        android:background="@drawable/shape_user_home"
         android:focusable="true"
         android:singleLine="true"
         android:maxLines="1"
