@@ -141,7 +141,6 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
-            			android:background="@drawable/shape_live_select"
 				android:focusable="true"
 				android:onClick="divLoadEpgLeft"
 				android:orientation="vertical"
@@ -215,7 +214,6 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
-            			android:background="@drawable/shape_live_select"
 				android:onClick="divLoadEpgRight"
 				android:orientation="vertical">
 
