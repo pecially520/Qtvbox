@@ -136,17 +136,15 @@
 
 
 			<LinearLayout
-            			android:id="@+id/divLoadEpgleft"
-            			android:layout_height="wrap_content"
-            			android:layout_gravity="center_vertical"
-            			android:background="@drawable/shape_live_select"
-            			android:clickable="true"
-            			android:focusable="true"
-            			android:onClick="divLoadEpgL"
-            			android:orientation="vertical"
-            			android:paddingTop="@dimen/vs_15"
-            			android:paddingBottom="@dimen/vs_15"
-            			android:visibility="gone">
+				android:id="@+id/divLoadEpgleft"
+				style="@style/epg_window_btn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:focusable="true"
+				android:onClick="divLoadEpgLeft"
+				android:orientation="vertical"
+				android:visibility="gone">
 
 				<TextView
 					android:id="@+id/tv_arrow0"
@@ -212,15 +210,12 @@
 
 			<LinearLayout
 				android:id="@+id/divLoadEpg"
-            			android:layout_height="wrap_content"
-            			android:layout_gravity="center_vertical"
-            			android:background="@drawable/shape_live_select"
-            			android:clickable="true"
-            			android:focusable="true"
+				style="@style/epg_window_btn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
 				android:onClick="divLoadEpgRight"
-            			android:orientation="vertical"
-            			android:paddingTop="@dimen/vs_15"
-            			android:paddingBottom="@dimen/vs_15">
+				android:orientation="vertical">
 
 				<TextView
 					android:id="@+id/tv_arrow"
