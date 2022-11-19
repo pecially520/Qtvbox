@@ -2,14 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/button_dialog_main"
+    android:background="@drawable/shape_user_focus"
     android:focusable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/vs_50"
         android:layout_marginBottom="@dimen/vs_10"
-        android:background="@drawable/shape_user_home"
+        android:background="@drawable/shape_setting_sort_focus"
         android:focusable="true"
         android:singleLine="true"
         android:maxLines="1"
