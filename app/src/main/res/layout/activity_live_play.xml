@@ -137,7 +137,6 @@
 
 			<LinearLayout
             			android:id="@+id/divLoadEpgleft"
-            			android:layout_width="30dp"
             			android:layout_height="wrap_content"
             			android:layout_gravity="center_vertical"
             			android:background="@drawable/shape_live_select"
@@ -213,7 +212,6 @@
 
 			<LinearLayout
 				android:id="@+id/divLoadEpg"
-            			android:layout_width="30dp"
             			android:layout_height="wrap_content"
             			android:layout_gravity="center_vertical"
             			android:background="@drawable/shape_live_select"
