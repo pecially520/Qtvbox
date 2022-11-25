@@ -1700,7 +1700,7 @@ public class LivePlayActivity extends BaseActivity {
         @Override
         public void run() {
             if (mVideoView == null) return;
-            String speed = PlayerHelper.getDisplaySpeed((float)mVideoView.getTcpSpeed());
+            String speed = PlayerHelper.getDisplaySpeed((int)mVideoView.getTcpSpeed());
             tvNetSpeed.setText(speed);
             tv_right_top_tipnetspeed.setText(speed);
             mHandler.postDelayed(this, 1000);
