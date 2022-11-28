@@ -436,7 +436,15 @@ public class DetailActivity extends BaseActivity {
             }
         });
 
+        mGridView.setOnFocusChangeListener((view, b) -> onGridViewFocusChange(view, b));
+
+
         setLoadSir(llLayout);
+    }
+
+    private void onGridViewFocusChange(View view, boolean hasFocus) {
+        if (llPlayerFragmentContainerBlock.getVisibility() != View.VISIBLE) return;
+        llPlayerFragmentContainerBlock.setFocusable(!hasFocus);
     }
 
     private void initCheckedSourcesForSearch() {
