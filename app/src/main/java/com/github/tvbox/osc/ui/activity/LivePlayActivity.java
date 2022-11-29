@@ -1497,7 +1497,7 @@ public class LivePlayActivity extends BaseActivity {
                         showTime();
                         break;
                     case 1:
-                        select = !Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, false);
+                        select = !Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, true);
                         Hawk.put(HawkConfig.LIVE_SHOW_NET_SPEED, select);
                         showNetSpeed();
                         break;
