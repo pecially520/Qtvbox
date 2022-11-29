@@ -1497,7 +1497,7 @@ public class LivePlayActivity extends BaseActivity {
                         showTime();
                         break;
                     case 1:
-                        select = !Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, true);
+                        select = !Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, false);
                         Hawk.put(HawkConfig.LIVE_SHOW_NET_SPEED, select);
                         showNetSpeed();
                         break;
@@ -1648,7 +1648,7 @@ public class LivePlayActivity extends BaseActivity {
         }
         liveSettingGroupList.get(3).getLiveSettingItems().get(Hawk.get(HawkConfig.LIVE_CONNECT_TIMEOUT, 1)).setItemSelected(true);
         liveSettingGroupList.get(4).getLiveSettingItems().get(0).setItemSelected(Hawk.get(HawkConfig.LIVE_SHOW_TIME, false));
-        liveSettingGroupList.get(4).getLiveSettingItems().get(1).setItemSelected(Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, true));
+        liveSettingGroupList.get(4).getLiveSettingItems().get(1).setItemSelected(Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, false));
         liveSettingGroupList.get(4).getLiveSettingItems().get(2).setItemSelected(Hawk.get(HawkConfig.LIVE_CHANNEL_REVERSE, false));
         liveSettingGroupList.get(4).getLiveSettingItems().get(3).setItemSelected(Hawk.get(HawkConfig.LIVE_CROSS_GROUP, false));
     }
@@ -1687,7 +1687,7 @@ public class LivePlayActivity extends BaseActivity {
 
     private void showNetSpeed() {
         tv_right_top_tipnetspeed.setVisibility(View.VISIBLE);
-        if (Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, true)) {
+        if (Hawk.get(HawkConfig.LIVE_SHOW_NET_SPEED, false)) {
             mHandler.post(mUpdateNetSpeedRun);
             tvNetSpeed.setVisibility(View.VISIBLE);
         } else {
