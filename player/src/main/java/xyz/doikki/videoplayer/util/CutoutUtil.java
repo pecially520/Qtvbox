@@ -144,6 +144,7 @@ public final class CutoutUtil {
         }
     }
 
+
     /**
      * 适配刘海屏，针对Android P以上系统
      */
