@@ -770,7 +770,7 @@
 			android:layout_toLeftOf="@+id/iv_circle_bg"
 			android:gravity="center"
 			android:singleLine="true"
-			android:text="芒果影视"
+			android:text="芒果影视-直播"
 			tools:text="0Kb/s"
 			android:textColor="#FFFCFFFF"
 			android:textSize="@dimen/vs_20" />
