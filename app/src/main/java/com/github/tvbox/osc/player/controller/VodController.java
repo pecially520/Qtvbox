@@ -584,8 +584,26 @@ public class VodController extends BaseController {
                 hideBottom();
             }
         });
+        mNextBtn.setNextFocusLeftId(R.id.play_time_start);
     }
 
+    private void hideLiveAboutBtn() {
+        if (mControlWrapper != null && mControlWrapper.getDuration() == 0) {
+            mPlayerSpeedBtn.setVisibility(GONE);
+            mPlayerTimeStartEndText.setVisibility(GONE);
+            mPlayerTimeStartBtn.setVisibility(GONE);
+            mPlayerTimeSkipBtn.setVisibility(GONE);
+            mPlayerTimeResetBtn.setVisibility(GONE);
+            mNextBtn.setNextFocusLeftId(R.id.zimu_select);
+        } else {
+            mPlayerSpeedBtn.setVisibility(View.VISIBLE);
+            mPlayerTimeStartEndText.setVisibility(View.VISIBLE);
+            mPlayerTimeStartBtn.setVisibility(View.VISIBLE);
+            mPlayerTimeSkipBtn.setVisibility(View.VISIBLE);
+            mPlayerTimeResetBtn.setVisibility(View.VISIBLE);
+            mNextBtn.setNextFocusLeftId(R.id.play_time_start);
+        }
+    }
     public void initLandscapePortraitBtnInfo() {
         if(mControlWrapper!=null && mActivity!=null){
             int width = mControlWrapper.getVideoSize()[0];
@@ -793,6 +811,7 @@ public class VodController extends BaseController {
                 break;
             case VideoView.STATE_PREPARED:
                 mPlayLoadNetSpeed.setVisibility(GONE);
+                hideLiveAboutBtn();
                 listener.prepared();
                 break;
             case VideoView.STATE_BUFFERED:
@@ -831,6 +850,8 @@ public class VodController extends BaseController {
         int keyCode = event.getKeyCode();
         int action = event.getAction();
         if (isBottomVisible()) {
+            mHandler.removeMessages(1002);
+            mHandler.removeMessages(1003);
             myHandle.postDelayed(myRunnable, myHandleSeconds);
             return super.dispatchKeyEvent(event);
         }
